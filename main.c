@@ -107,7 +107,10 @@ void print_menu_order(int *input, orderMenuItems *orderMenuItems, int orderMenuI
         }
 
         orderInput--;
-
+        if (orderInput == orderMenuItemsCount)
+        {
+            break;
+        }
         // save order id in orders array
         orders[*orderCount] = orderInput;
         *orderCount += 1;
